@@ -2,5 +2,6 @@
 
 CREATE TABLE userAccount(
   id SERIAL,
-  username TEXT
+  username TEXT,
+  
 );
