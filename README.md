@@ -15,52 +15,19 @@ You'll need PostgreSQL for this.
 
 **Pre-requisite:** Git bash or other similar Bash shell.
 
-Install PostgreSQL with [Chocolatey](https://chocolatey.org/):
+Follow the instructions from [the PostgreSQL step in UpLeveled's System Setup Instructions](https://github.com/upleveled/system-setup/blob/master/windows.md#user-content-postgresql).
+
+Run the following commands to set up the database and the user (now the password will be `postgres`):
 
 ```sh
-choco install postgresql --params '/Password:postgres' -y
-```
-
-This will install PostgreSQL and create a default user of `postgres` with a password of `postgres`.
-
-Now let's set an environment variable to tell PostgreSQL where to put the data:
-
-```sh
-echo "export PGDATA=${$(dirname $(which postgres))/bin/data}" >> %userprofile%/.bash_profile
-source %userprofile%/.bash_profile
-```
-
-Now everything should be ready to go! Try running `postgres` on the command line.
-
-If it doesn't work and it complains about not being able to find `postgres`, it may be missing the proper `PATH` variable.
-
-This may help:
-
-```sh
-echo "export PATH=$PATH:$(dirname $(which postgres))" >> %userprofile%/.bash_profile
-source %userprofile%/.bash_profile
+psql -U postgres -c "CREATE DATABASE slonik;"
+psql -U postgres -c "CREATE USER slonik WITH ENCRYPTED PASSWORD 'slonik';"
+psql -U postgres -c "GRANT ALL PRIVILEGES ON DATABASE slonik TO slonik;"
 ```
 
 #### macOS
 
-Install PostgreSQL with [Homebrew](https://brew.sh/):
-
-```sh
-brew install postgresql
-```
-
-This will install PostgreSQL and create just a single user with your username and all role permissions. There will be no `postgres` user set up.
-
-Now let's set an environment variable to tell PostgreSQL where to put the data:
-
-```sh
-echo "export PGDATA=/usr/local/var/postgres" >> ~/.bash_profile
-source ~/.bash_profile
-```
-
-Now everything should be ready to go! Try running `postgres` on the command line.
-
-### Database and Role Setup
+Follow the instructions from [the PostgreSQL step in UpLeveled's System Setup Instructions](https://github.com/upleveled/system-setup/blob/master/macos.md#user-content-postgresql).
 
 Run the following commands to set up the database and the user:
 
