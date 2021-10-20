@@ -16,7 +16,7 @@
     "next": "latest",
     "react": "^16.10.1",
     "react-dom": "^16.10.1",
-    "slonik": "^19.0.1"
+    "slonik": "24.1.2"
   },
   "devDependencies": {
     "@types/node": "^12.7.8",
