@@ -1140,10 +1140,10 @@
     "@types/prop-types" "*"
     csstype "^2.2.0"
 
-"@types/slonik@^19.0.0":
-  version "19.0.0"
-  resolved "https://registry.yarnpkg.com/@types/slonik/-/slonik-19.0.0.tgz#cc988968ec8dbbcd58a1ec623ffee793ab3925ca"
-  integrity sha512-lFQbw0zZlLQe1xAtEzVNzKgtLrqR6Z8qzn3kJ7YBUZqPL+RL6C2MY6AeRkhNoYFCn0ZxvCkP79U7FstP0eDrZA==
+"@types/slonik@^22.0.0":
+  version "22.1.5"
+  resolved "https://registry.yarnpkg.com/@types/slonik/-/slonik-22.1.5.tgz#68c491b87eff4013f1509fef1150006f53e520a1"
+  integrity sha512-ZEucSh9f4KdK9hmDFF52sdmdCa6dN5wCvkZ4VEjRqMO+MEViZunAfq8gTfsfHPQ/RqjyTqL8OvGHdAuRTIj9jg==
   dependencies:
     "@types/node" "*"
 
